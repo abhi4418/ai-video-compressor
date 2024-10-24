@@ -23,11 +23,10 @@ export async function POST(request: NextRequest) {
 
 
     try {
-        const { userId }: { userId: string | null } = await auth()
+        const { userId }: { userId: string | null } = auth()
         if (!userId) {
             return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
         }
-        //todo to check user
     if(
         !process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME ||
         !process.env.CLOUDINARY_API_KEY ||
