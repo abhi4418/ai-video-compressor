@@ -18,8 +18,7 @@ interface CloudinaryUploadResult {
     [key: string]: any
 }
 
-export async function POST(request: NextRequest) {
-
+export default async function POST(request: NextRequest) {
 
     try {
     if(
